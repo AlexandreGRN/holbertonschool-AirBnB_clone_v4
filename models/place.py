@@ -51,6 +51,7 @@ class Place(BaseModel, Base):
         latitude = 0.0
         longitude = 0.0
         amenity_ids = []
+        user = ""
 
     def __init__(self, *args, **kwargs):
         """initializes Place"""
@@ -78,3 +79,4 @@ class Place(BaseModel, Base):
                 if amenity.place_id == self.id:
                     amenity_list.append(amenity)
             return amenity_list
+        
